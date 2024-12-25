@@ -9,11 +9,6 @@
 frontend/runtime/
 backend/runtime/
 
-# Asset directories
-/assets/
-frontend/web/assets/
-backend/web/assets/
-
 # Composer files
 composer.phar
 
