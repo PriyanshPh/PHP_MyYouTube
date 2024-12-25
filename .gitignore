@@ -1,0 +1,48 @@
+# Yii console commands
+/yii
+/yii_test
+/yii_test.bat
+
+# Vendor and runtime directories
+/vendor/
+/runtime/
+frontend/runtime/
+backend/runtime/
+
+# Asset directories
+/assets/
+frontend/web/assets/
+backend/web/assets/
+
+# Composer files
+composer.phar
+
+# Node modules
+/node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment configuration
+.env
+.env.*
+
+# System-specific files
+Thumbs.db
+.DS_Store
+
+# IDE-specific files
+.idea/
+nbproject/
+.buildpath
+.project
+.settings/
+
+# Backup and archive files
+*.bak
+*.sql
+*.tar
+*.zip
+*.gz
+*.7z
