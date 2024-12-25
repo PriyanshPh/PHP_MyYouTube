@@ -1,0 +1,1138 @@
+2024-08-03 12:10:13 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:10:13 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722679813.8638
+    'REQUEST_TIME' => 1722679813
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:10:36 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:10:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\MyTube\\'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722679836.6783
+    'REQUEST_TIME' => 1722679836
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\MyTube\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:13:55 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:13:54 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722680034.9764
+    'REQUEST_TIME' => 1722680034
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:17:22 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:17:22 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722680242.5578
+    'REQUEST_TIME' => 1722680242
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:18:30 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:18:30 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722680310.7952
+    'REQUEST_TIME' => 1722680310
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:37:38 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:37:38 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722681458.3842
+    'REQUEST_TIME' => 1722681458
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:41:23 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:41:23 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\bin;'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\Admin\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'WSLENV' => 'WT_SESSION:WT_PROFILE_ID:'
+    'WT_PROFILE_ID' => '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'
+    'WT_SESSION' => 'd7ec6691-6718-4fc6-a322-0e3462ea67c3'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722681683.7088
+    'REQUEST_TIME' => 1722681683
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-03 12:48:45 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'mytube' in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'mytube'
+)
+
+2024-08-03 12:48:45 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_14476' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722682125.168
+    'REQUEST_TIME' => 1722682125
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2024-08-06 09:12:07 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: migrate/status in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Controller.php:149
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Controller.php(180): yii\base\Controller->runAction('status', Array)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php(552): yii\console\Controller->runAction('status', Array)
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/status', Array)
+#3 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/status', Array)
+#4 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#5 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrate/status". in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/status', Array)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#3 {main}
+2024-08-06 09:12:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PSExecutionPolicyPreference' => 'Bypass'
+    'PSModulePath' => 'C:\\Users\\Admin\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'TERM_SESSION_ID' => 'cf559ef5-3a88-4ba1-8cb5-a6b203196da4'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'ProgramW6432' => 'C:\\Program Files'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'USERNAME' => 'Admin'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'JETBRAINS_INTELLIJ_COMMAND_END_MARKER' => 'o7rCdlqbhIZsBfBFgSqAwbA9O6FylkvsXNyoyyDOISCLgAN3IuE5SxLsPgL1Tac9'
+    'OS' => 'Windows_NT'
+    'PROCESSOR_REVISION' => 'ba03'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'IDEA_INITIAL_DIRECTORY' => 'C:\\Users\\Admin\\Desktop'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'PROCESSOR_LEVEL' => '6'
+    'Path' => 'C:\\xampp\\php;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\bin;'
+    'windir' => 'C:\\Windows'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-8FIJFPB'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOMEDRIVE' => 'C:'
+    'ProgramFiles' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'LOGONSERVER' => '\\\\DESKTOP-8FIJFPB'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\bin;'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'HOMEPATH' => '\\Users\\Admin'
+    'SystemRoot' => 'C:\\Windows'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-8FIJFPB'
+    'SystemDrive' => 'C:'
+    'COMPUTERNAME' => 'DESKTOP-8FIJFPB'
+    'ProgramData' => 'C:\\ProgramData'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'EFC_23956' => '1'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1722928326.8802
+    'REQUEST_TIME' => 1722928326
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/status'
+    ]
+    'argc' => 2
+]
+2024-10-15 13:12:53 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "-v". in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('-v', Array)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('-v', Array)
+#2 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "-v". in C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('-v', Array)
+#1 C:\xampp\htdocs\MyTube\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\xampp\htdocs\MyTube\yii(23): yii\base\Application->run()
+#3 {main}
+2024-10-15 13:12:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'IIC-PRIYANSH'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DataGrip' => 'C:\\Program Files\\JetBrains\\DataGrip 2024.2.2\\bin;'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_21068' => '1'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Admin'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\IIC-PRIYANSH'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Admin\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\Admin\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\composer;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\bin;;C:\\Program Files\\JetBrains\\DataGrip 2024.2.2\\bin;'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2024.1.4\\bin;'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 186 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => 'ba03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'IIC-PRIYANSH'
+    'USERDOMAIN_ROAMINGPROFILE' => 'IIC-PRIYANSH'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\MyTube\\'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\MyTube\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1728990773.866
+    'REQUEST_TIME' => 1728990773
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\MyTube\\yii'
+        1 => '-v'
+    ]
+    'argc' => 2
+]
