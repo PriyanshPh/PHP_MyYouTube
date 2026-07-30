@@ -134,39 +134,37 @@ This project was developed to demonstrate practical software engineering skills 
 
 # 🛠 Technology Stack
 
-| Layer | Technology |
-|---------|------------|
-| Backend | PHP |
-| Framework | Yii2 |
-| Database | MySQL |
-| Frontend | HTML5, CSS3, Bootstrap |
-| Scripting | JavaScript, jQuery |
-| Video Player | HTML5 Video |
-| Version Control | Git & GitHub |
-| Server | Apache |
-| Development Environment | XAMPP |
+| Layer              | Technology                  |
+| ------------------ | --------------------------- |
+| Backend            | PHP 8                       |
+| Framework          | Yii2 Advanced               |
+| Database           | MySQL                       |
+| Frontend           | HTML5, CSS3, Bootstrap      |
+| JavaScript         | JavaScript, jQuery          |
+| Authentication     | Yii2 User Authentication    |
+| Architecture       | MVC (Model-View-Controller) |
+| Dependency Manager | Composer                    |
+| Version Control    | Git & GitHub                |
+| Web Server         | Apache                      |
 
 ---
 
 # 🏗 System Architecture
 
 ```text
-                  User
-                    │
-                    ▼
-            Authentication
-                    │
-                    ▼
-               Home Page
-          ┌─────────┼─────────┐
-          ▼         ▼         ▼
-      Videos     Channels   Search
-          │         │
-          ▼         ▼
-    Video Details  Profile
-          │
-          ▼
-   Comments & Interaction
+                        Client
+                           │
+          ┌────────────────┴────────────────┐
+          ▼                                 ▼
+     Frontend (User)                  Backend (Admin)
+          │                                 │
+          └──────────────┬──────────────────┘
+                         ▼
+                    Common Layer
+       (Models, Components, Helpers, Config)
+                         │
+                         ▼
+                     MySQL Database
 ```
 
 ---
@@ -212,22 +210,19 @@ Interact through Comments
 ```text
 PHP_MyYouTube/
 
-│── assets/
-│── commands/
-│── config/
-│── controllers/
-│── mail/
-│── models/
-│── runtime/
-│── vendor/
-│── views/
-│── web/
-
-README.md
-composer.json
-yii
+├── backend/          # Admin Panel
+├── common/           # Shared models, components and configurations
+├── console/          # Console commands
+├── frontend/         # User-facing application
+├── vendor/           # Composer dependencies
+├── environments/     # Environment initialization
+├── admin/            # Production backend entry point
+├── assets/
+├── composer.json
+├── composer.lock
+├── init
+└── yii
 ```
-
 ---
 
 # ⚙ Installation
